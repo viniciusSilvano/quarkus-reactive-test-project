@@ -30,6 +30,10 @@
     </dependencies>
   </dependencyManagement>
   <dependencies>
+	<dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy-reactive</artifactId>
+    </dependency>
 	 <!-- Rest server Reactive dependency -->
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -62,6 +66,7 @@
       <artifactId>quarkus-junit5</artifactId>
       <scope>test</scope>
     </dependency>
+   
 
   </dependencies>
   <build>
