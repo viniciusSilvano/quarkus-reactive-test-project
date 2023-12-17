@@ -60,7 +60,7 @@ go to the root directory and execute this command "docker build -t quarkus-react
 docker run -it --rm quarkus-reactive-test-project
 
 #Running
-still in the root directory execute this command "docker run -dp 127.0.0.1:8080:8080 quarkus-reactive-test-project"
+still in the root directory execute this command "docker run -p 127.0.0.1:8080:8080 --rm quarkus-reactive-test-project"
 
 ## Related Guides
 
