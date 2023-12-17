@@ -51,15 +51,15 @@ If you want to learn more about building native executables, please consult http
 
 mvnw compile quarkus:dev -Ddebug
 
-## Run in docker
+# Run in docker
 
-# Building
+## Building
 go to the root directory and execute this command "docker build -t quarkus-reactive-test-project ." with docker installed
 
 #Test/Debugging
 docker run -it --rm quarkus-reactive-test-project
 
-# Running
+## Running
 still in the root directory execute this command "docker run -p 127.0.0.1:8080:8080 --rm quarkus-reactive-test-project"
 
 ## Related Guides
