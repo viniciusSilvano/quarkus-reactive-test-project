@@ -1,21 +1,21 @@
-package org.acme.rest_clients.json_place_holder.posts.models;
+package org.acme.rest_clients.json_place_holder.posts.model;
 
 public class Post {
-	private Long userId;
-	private Long id;
+	private Integer userId;
+	private Integer id;
 	private String title;
 	private String body;
 	
-	public Long getUserId() {
+	public Integer getUserId() {
 		return userId;
 	}
-	public void setUserId(Long userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getTitle() {

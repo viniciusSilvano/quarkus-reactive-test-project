@@ -2,7 +2,7 @@ package org.acme.resources.fruit;
 
 import java.util.Set;
 
-import org.acme.models.fruit.Fruit;
+import org.acme.model.fruit.Fruit;
 import org.acme.resources.ResourceBase;
 import org.acme.services.fruit.FruitService;
 

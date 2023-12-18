@@ -1,22 +1,22 @@
-package org.acme.rest_clients.json_place_holder.posts.models;
+package org.acme.rest_clients.json_place_holder.comments.model;
 
 public class Comment {
-	private Long postId;
-	private Long id;
+	private Integer postId;
+	private Integer id;
 	private String name;
 	private String email;
 	private String body;
 	
-	public Long getPostId() {
+	public Integer getPostId() {
 		return postId;
 	}
-	public void setPostId(Long postId) {
+	public void setPostId(Integer postId) {
 		this.postId = postId;
 	}
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {

@@ -2,8 +2,8 @@ package org.acme.resources.comment;
 
 import java.util.Set;
 
-import org.acme.rest_clients.json_place_holder.posts.IJsonPlaceHolderCommentsClient;
-import org.acme.rest_clients.json_place_holder.posts.models.Comment;
+import org.acme.rest_clients.json_place_holder.comments.IJsonPlaceHolderCommentsClient;
+import org.acme.rest_clients.json_place_holder.comments.model.Comment;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import io.smallrye.mutiny.Uni;
@@ -30,13 +30,13 @@ public class CommentResource {
 	
 	@GET()
 	@Path(value = "/{id}")
-	public Comment getPostById(@PathParam("id") Long id) {
+	public Comment getPostById(@PathParam("id") Integer id) {
 		return commentClient.getCommentById(id);
 	}
 	
 	@GET()
 	@Path(value = "/{id}/async")
-	public Comment getPostByIdAsync(@PathParam("id") Long id) {
+	public Uni<Comment> getPostByIdAsync(@PathParam("id") Integer id) {
 		return commentClient.getCommentByIdAsync(id);
 	}
 }

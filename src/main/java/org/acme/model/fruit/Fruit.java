@@ -1,4 +1,4 @@
-package org.acme.models.fruit;
+package org.acme.model.fruit;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

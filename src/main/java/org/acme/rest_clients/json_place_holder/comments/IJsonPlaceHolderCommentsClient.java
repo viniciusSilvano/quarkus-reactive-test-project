@@ -1,8 +1,8 @@
-package org.acme.rest_clients.json_place_holder.posts;
+package org.acme.rest_clients.json_place_holder.comments;
 
 import java.util.Set;
 
-import org.acme.rest_clients.json_place_holder.posts.models.Comment;
+import org.acme.rest_clients.json_place_holder.comments.model.Comment;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import io.smallrye.mutiny.Uni;
@@ -22,9 +22,9 @@ public interface IJsonPlaceHolderCommentsClient {
 	
 	@GET
 	@Path(value = "/{id}")
-	Comment getCommentById(@PathParam("id") Long id);
+	Comment getCommentById(@PathParam("id") Integer id);
 	
 	@GET
 	@Path(value = "/{id}")
-	Comment getCommentByIdAsync(@PathParam("id") Long id);
+	Uni<Comment> getCommentByIdAsync(@PathParam("id") Integer id);
 }

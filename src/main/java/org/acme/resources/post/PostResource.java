@@ -3,7 +3,7 @@ package org.acme.resources.post;
 import java.util.Set;
 
 import org.acme.rest_clients.json_place_holder.posts.IJsonPlaceHolderPostsClient;
-import org.acme.rest_clients.json_place_holder.posts.models.Post;
+import org.acme.rest_clients.json_place_holder.posts.model.Post;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import io.smallrye.common.annotation.NonBlocking;
@@ -32,14 +32,14 @@ public class PostResource {
 	
 	@GET()
 	@Path(value = "/{id}")
-	public Post getPostById(@PathParam("id") Long id) {
+	public Post getPostById(@PathParam("id") Integer id) {
 		return postClient.getPostById(id);
 	}
 	
 	@GET()
 	@Path(value = "/{id}/async")
 	@NonBlocking
-	public Uni<Post> getPostByIdAsync(@PathParam("id") Long id) {
+	public Uni<Post> getPostByIdAsync(@PathParam("id") Integer id) {
 		return postClient.getPostByIdAsync(id);
 	}
 

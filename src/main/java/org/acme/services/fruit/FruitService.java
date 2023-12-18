@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.concurrent.CompletionException;
 
 import org.acme.dao.FruitDAO;
-import org.acme.models.fruit.Fruit;
+import org.acme.model.fruit.Fruit;
 import org.acme.services.ServiceBase;
 
 import io.smallrye.mutiny.Uni;
