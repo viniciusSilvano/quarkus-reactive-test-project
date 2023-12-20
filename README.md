@@ -62,5 +62,10 @@ docker run -it --rm quarkus-reactive-test-project
 ## Running
 still in the root directory execute this command "docker run -p 127.0.0.1:8080:8080 --rm quarkus-reactive-test-project"
 
+## data APIs
+
+https://jsonplaceholder.typicode.com/
+
 ## Related Guides
+
 
