@@ -6,6 +6,7 @@ import org.acme.rest_clients.json_place_holder.posts.IJsonPlaceHolderPostsClient
 import org.acme.rest_clients.json_place_holder.posts.model.Post;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
+import io.smallrye.common.annotation.Blocking;
 import io.smallrye.common.annotation.NonBlocking;
 import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
@@ -19,6 +20,7 @@ public class PostResource {
 	IJsonPlaceHolderPostsClient postClient;
 	
 	@GET
+	@Blocking
 	public Set<Post> getAllPosts(){
 		return postClient.getAllPosts();
 	}
@@ -32,6 +34,7 @@ public class PostResource {
 	
 	@GET()
 	@Path(value = "/{id}")
+	@Blocking
 	public Post getPostById(@PathParam("id") Integer id) {
 		return postClient.getPostById(id);
 	}

@@ -6,6 +6,7 @@ import org.acme.rest_clients.json_place_holder.photos.IJsonPlaceHolderPhotosClie
 import org.acme.rest_clients.json_place_holder.photos.model.Photo;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
+import io.smallrye.common.annotation.Blocking;
 import io.smallrye.common.annotation.NonBlocking;
 import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
@@ -19,6 +20,7 @@ public class PhotoResource {
 	IJsonPlaceHolderPhotosClient photoClient;
 	
 	@GET
+	@Blocking
 	public Set<Photo> getAllPhotos(){
 		return photoClient.getAllPhotos();
 	}
@@ -32,6 +34,7 @@ public class PhotoResource {
 	
 	@GET()
 	@Path(value = "/{id}")
+	@Blocking
 	public Photo getPhotoById(@PathParam("id") Integer id) {
 		return photoClient.getPhotoById(id);
 	}
