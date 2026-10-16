@@ -1,17 +1,16 @@
 package org.acme.services.fruit;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.concurrent.CompletionException;
-
+import io.smallrye.mutiny.Uni;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
 import org.acme.dao.FruitDAO;
 import org.acme.model.fruit.Fruit;
 import org.acme.services.ServiceBase;
 
-import io.smallrye.mutiny.Uni;
-import jakarta.enterprise.context.RequestScoped;
-import jakarta.inject.Inject;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.CompletionException;
 
 @RequestScoped
 public class FruitService extends ServiceBase {

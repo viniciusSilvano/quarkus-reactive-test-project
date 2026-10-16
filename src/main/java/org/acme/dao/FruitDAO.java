@@ -1,16 +1,15 @@
 package org.acme.dao;
 
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
+import io.smallrye.mutiny.Uni;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
 import org.acme.model.fruit.Fruit;
 import org.hibernate.reactive.mutiny.Mutiny;
 import org.hibernate.reactive.mutiny.Mutiny.Session;
 
-import io.smallrye.mutiny.Uni;
-import jakarta.enterprise.context.RequestScoped;
-import jakarta.inject.Inject;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @RequestScoped
 public class FruitDAO {

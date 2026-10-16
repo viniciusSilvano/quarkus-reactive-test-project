@@ -1,11 +1,5 @@
 package org.acme.resources.fruit;
 
-import java.util.Set;
-
-import org.acme.model.fruit.Fruit;
-import org.acme.resources.ResourceBase;
-import org.acme.services.fruit.FruitService;
-
 import io.smallrye.common.annotation.NonBlocking;
 import io.smallrye.mutiny.Uni;
 import jakarta.inject.Inject;
@@ -13,6 +7,11 @@ import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import org.acme.model.fruit.Fruit;
+import org.acme.resources.ResourceBase;
+import org.acme.services.fruit.FruitService;
+
+import java.util.Set;
 
 @Path("/fruits")
 public class FruitResource extends ResourceBase {
